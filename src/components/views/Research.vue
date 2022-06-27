@@ -1,7 +1,7 @@
 <template>
     <v-container fill-height fluid class="ma-0 pa-0">
         <v-row no-gutters align="center" justify="center">
-            <v-col cols="8" sm="12" lg="6" md="6" xl="8" align-self="center">
+            <v-col cols="8" sm="12" lg="8" md="8" xl="8" align-self="center">
                 <v-card light class="overflow-y-auto max-h">
 
                     <v-toolbar>

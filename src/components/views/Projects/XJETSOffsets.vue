@@ -6,7 +6,7 @@
                     <v-container fluid>
                         <v-row align="center" justify="center">
                             <v-col cols="12" align-self="center" class="xjets_center">
-                                <v-img :src="require('../../../assets/3c111_xray_radio.png')" max-width="800" />
+                                <v-img :src="require('../../../assets/3c111_xray_radio.png')" />
                             </v-col>
                         </v-row>
                     </v-container>

@@ -6,7 +6,7 @@
                     <v-container fluid>
                         <v-row align="center" justify="center">
                             <v-col cols="12" align-self="center" class="xjets_center">
-                                <v-img :src="require('../../../assets/low-counts.png')" max-width="800" />
+                                <v-img :src="require('../../../assets/low-counts.png')"      />
                             </v-col>
                         </v-row>
                     </v-container>
