@@ -47,17 +47,3 @@ export default {
     })
 }
 </script>
-
-<style>
-.test {
-    /* position: absolute; */
-    /* left: 50%;
-    transform: translate(-50%, -50%);
-    top: 50%; */
-    /* max-height:calc(80vh) */
-}
-
-.max-h {
-    /* max-height: calc(90vh); */
-}
-</style>
