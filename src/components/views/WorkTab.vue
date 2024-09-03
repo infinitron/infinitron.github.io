@@ -45,7 +45,7 @@ export default {
                 time:'Aug 2018-Jun 2022',employer:'University of Maryland-Baltimore County',place:'Baltimore, MD',duties:'Analyzed X-ray and radio structural differences in several extragalactic jets to constrain their X-ray emission mechanism.',position:'Research Assistant',color:'cyan'
             },
             {
-                time:'Jul 2022-Present',employer:'Arizona State University',place:'Tempe, AZ', duties:'Develop a 25000 FPS radio camera to detect Fast Radio Bursts (FRBs) below 100 MHZ',position:'Postdoc',color:'orange'
+                time:'Jul 2022-Present',employer:'Arizona State University',place:'Tempe, AZ', duties:'Developing a 25000 FPS radio camera to detect Fast Radio Bursts (FRBs) below 100 MHZ',position:'Postdoc',color:'orange'
             }
         ].reverse()
     })
