@@ -1,4 +1,4 @@
-# i.ambatman.com
+# infinitron.github.io
 
 ## Project setup
 ```
