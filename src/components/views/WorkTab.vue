@@ -35,14 +35,17 @@ export default {
     data: () => ({
         work:[
             {
-                time:'Sep 2014-Aug 2017',employer:'National Remote Sensing Centre',place:'Hyderabad, Telangana',duties:'Developed remote sensing satellite data based systems for near real-time spatio-temporal water informatics.',position:'Scientist', color: 'green'
+                time:'Sep 2014-Aug 2017',employer:'National Remote Sensing Centre',place:'Hyderabad, Telangana',duties:'Developed remote sensing satellite data-based systems for near real-time spatio-temporal water informatics.',position:'Scientist', color: 'green'
             },
             {
-                time:'Aug 2017-Aug 2018',employer:'University of Maryland-Baltimore County',place:'Baltimore, MD',duties:'Assisted the course instructor for PHYS 121 with conducting tutorial sessions and exams.',position:'Teaching Assistant', color: 'indigo'
+                time:'Aug 2017-Jul 2018',employer:'University of Maryland-Baltimore County',place:'Baltimore, MD',duties:'Assisted the course instructor for PHYS 121 with conducting tutorial sessions and exams.',position:'Teaching Assistant', color: 'indigo'
             },
             {time:'Sep 2021-Nov- 2021',employer:'Center for Astrophysics, Harvard-SAO',place:'Boston, MA',duties:'Performed simulations to understand the systematic uncertainties in LIRA analyses.',position:'Visiting predoc', color: 'pink'},
             {
-                time:'Aug 2018-May 2022',employer:'University of Maryland-Baltimore County',place:'Baltimore, MD',duties:'Analyzed X-ray and radio structural differences in several extragalactic jets to study the relation with their X-ray emission mechanism.',position:'Research Assistant',color:'cyan'
+                time:'Aug 2018-Jun 2022',employer:'University of Maryland-Baltimore County',place:'Baltimore, MD',duties:'Analyzed X-ray and radio structural differences in several extragalactic jets to constrain their X-ray emission mechanism.',position:'Research Assistant',color:'cyan'
+            },
+            {
+                time:'Jul 2022-Present',employer:'Arizona State University',place:'Tempe, AZ', duties:'Develop a 25000 FPS radio camera to detect Fast Radio Bursts (FRBs) below 100 MHZ',position:'Postdoc',color:'orange'
             }
         ].reverse()
     })

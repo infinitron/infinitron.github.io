@@ -53,7 +53,7 @@
 
 <script>
 import BatDialog from './BatDialog.vue'
-import cv from '../assets/CV_2022.pdf'
+import cv from '../assets/Karthik_CV_2024.pdf'
 export default {
     name: 'SideBar',
     data: () => ({

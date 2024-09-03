@@ -22,6 +22,11 @@
                     <v-container fill-height fluid>
                         <v-row>
                             <v-col cols="12">
+                                <EPIC />
+                            </v-col>
+                        </v-row>
+                        <v-row>
+                            <v-col cols="12">
                                 <XJETSProj />
                             </v-col>
                         </v-row>
@@ -41,10 +46,11 @@
 <script>
 import XJETSProj from './Projects/XJETSOffsets.vue'
 import LowCountsProj from './Projects/LowCountJets.vue'
+import EPIC from './Projects/EPIC.vue'
 
 export default {
     name: 'ResearchPage',
-    components: { XJETSProj, LowCountsProj }
+    components: { XJETSProj, LowCountsProj, EPIC }
 }
 </script>
 

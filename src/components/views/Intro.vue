@@ -1,11 +1,11 @@
 <template>
         <v-card class="bkg-blur">
-            <p class="f2"> I'm Karthik, a postdoc at Arizona State University.</p>
+            <p class="f2"> Hey there! I'm Karthik and I'm a postdoc at Arizona State University.</p>
                 <p class="f1_5">
                     I work on extragalactic jets, fast radio bursts, astrostatistics and high performance computing.
                 </p>
                 <p class="f1_5">
-                    I also like to watch black hole lensing. <v-icon dark>mdi-arrow-down-right</v-icon>
+                    I also like to watch gravitational lensing. <v-icon dark>mdi-arrow-down-right</v-icon>
                 </p>
     </v-card>
 
@@ -26,6 +26,7 @@ export default {
     padding: 2.5%;
     top:1% !important;
     text-align:center;
+    width:100%;
 }
 
 .f2{

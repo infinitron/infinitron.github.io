@@ -18,7 +18,7 @@
                         A novel approach using LIRA
                     </v-card-subtitle>
                     <v-card-text>
-                        Deteting X-ray/raido offsets can be straight forward in the case of isolated components. While
+                        Deteting X-ray/radio offsets can be straight forward in the case of isolated components. While
                         it is typical to obtain a mas accuracy in localizing radio sources, X-ray sources can be
                         problematic. Specifically, the emission from the bright core and poisson fluctuations can
                         introduce additional uncertainties in not only localization but also in detection. See below

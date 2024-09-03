@@ -44,13 +44,9 @@
                     </v-card-text>
                     <v-card-actions>
                         <v-spacer> </v-spacer>
-                        <v-tooltip bottom>
-                            <template v-slot:activator="{ on, attrs }">
-                                <v-btn v-bind="attrs" v-on="on" text dark href="" color="indigo">ADS Link <v-icon>mdi-open-in-new</v-icon>
-                                </v-btn>
-                            </template>
-                            <span>To be updated soon</span>
-                        </v-tooltip>
+                        <v-btn href="https://ui.adsabs.harvard.edu/abs/2023ApJS..265....8R/abstract" target="_blank"
+                            dark link color="indigo">ADS Link <v-icon>mdi-open-in-new</v-icon>
+                        </v-btn>
 
                     </v-card-actions>
                 </v-card>

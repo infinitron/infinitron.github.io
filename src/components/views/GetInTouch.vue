@@ -6,14 +6,15 @@
                     <v-card-title>Contact Me</v-card-title>
                     <v-card-text class="text-h6 ma-1">
                         <v-overlay v-if="showButton" absolute opacity="0.5">
-                            <v-btn v-if="showButton" @click="decode">Decode</v-btn>
+                            <v-btn v-if="showButton" @click="decode">Show</v-btn>
                         </v-overlay>
                         Email:<br> <a v-if="showButton == false" :href="email">{{ email }}</a> <span
                             v-if="showButton">{{ email }}</span>
                         <br>
-                        <a v-if="showButton == false" :href="bat_email">{{ bat_email }}</a> <span v-if="showButton">{{
+                        <!-- <a v-if="showButton == false" :href="bat_email">{{ bat_email }}</a> <span v-if="showButton">{{
                                 bat_email
-                        }}</span> <br><br>
+                        }}</span>  -->
+                        <br><br>
                         Address:<br>
                         <pre>{{ address }}</pre>
                     </v-card-text>
@@ -27,10 +28,10 @@
 export default {
     name: 'ContaceMeTab',
     data: () => ({
-        email_enc: 'a2FydGhpa0B1bWJjLmVkdQ==',
-        address_enc: 'VU1CQyBQaHlzaWNzIEJ1aWxkaW5nCjEwMDAgSGlsbHRvcCBDaXIsIEJhbHRpbW9yZSwgTUQgMjEyNTA=',
-        email: 'a2FydGhpa0B1bWJjLmVkdQ==',
-        address: 'VU1CQyBQaHlzaWNzIEJ1aWxkaW5nCjEwMDAgSGlsbHRvcCBDaXIsIEJhbHRpbW9yZSwgTUQgMjEyNTA',
+        email_enc: 'a2FydGhpa0Bhc3UuZWR1',
+        address_enc: 'QVNVIFNjaG9vbCBvZiBFYXJ0aCBhbmQgU3BhY2UgRXhwbG9yYXRpb24KVGVtcGUsIEFaLCA4NTI4Nw==',
+        email: 'a2FydGhpa0Bhc3UuZWR1',
+        address: 'QVNVIFNjaG9vbCBvZiBFYXJ0aCBhbmQgU3BhY2UgRXhwbG9yYXRpb24KVGVtcGUsIEFaLCA4NTI4Nw==',
         bat_email: 'aUBhbWJhdG1hbi5jb20=',
         showButton: true,
     }),
