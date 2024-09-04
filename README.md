@@ -1,4 +1,4 @@
-# infinitron.github.io
+# http://karthik-et.al
 
 ## Project setup
 ```
