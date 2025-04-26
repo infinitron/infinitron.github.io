@@ -1,12 +1,11 @@
 <template>
     <v-card class="bkg-blur">
-        <p class="f2"> Hey there! I'm Karthik and I'm a GPU Engineer at Caltech.</p>
+        <p class="f2"> Hey there! I'm Karthik and I'm a GPU guy at Caltech.</p>
         <p class="f1_5">
-            I do a bit of High-performance computing for DSA-2000. I also try
-            to understand the nature of extragalactic jets and fast radio bursts.
+            I do a bit of High-performance computing for the DSA-2000 project.
         </p>
         <p class="f1_5">
-            Sometimes I stare at gravitational lensing. <v-icon dark>mdi-arrow-down-right</v-icon>
+            But 94.2477% of my work is just me squinting at my screen and muttering 'huh, that's weird.'
         </p>
     </v-card>
 
