@@ -6,7 +6,7 @@
             to understand the nature of extragalactic jets and fast radio bursts.
         </p>
         <p class="f1_5">
-            I also like to watch gravitational lensing. <v-icon dark>mdi-arrow-down-right</v-icon>
+            Sometimes I stare at gravitational lensing. <v-icon dark>mdi-arrow-down-right</v-icon>
         </p>
     </v-card>
 
