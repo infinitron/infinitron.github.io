@@ -23,7 +23,7 @@ export default {
     backdrop-filter: blur(2px);
     /* position: absolute; */
     color: white !important;
-    padding: 2.5%;
+    padding: 1.5%;
     top: 1% !important;
     text-align: center;
     width: 100%;
@@ -34,6 +34,6 @@ export default {
 }
 
 .f1_5 {
-    font-size: 1.5em;
+    font-size: 1em;
 }
 </style>

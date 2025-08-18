@@ -9,9 +9,9 @@
             </router-link>
         </div>
         <v-list>
-            <v-list-item>
+            <v-list-item class="bio">
                 <v-list-item-content>
-                    <v-list-item-title class="text-h6">
+                    <v-list-item-title class="text-h7">
                         Karthik Reddy
                     </v-list-item-title>
                     <v-list-item-subtitle>Basic Astrophysicist</v-list-item-subtitle>
@@ -28,7 +28,7 @@
             <v-divider></v-divider>
             <v-list-item-group v-model="selected_item" color="blue lighten-1" @change="change_page">
                 <v-list-item v-for="item in items" :key="item.id" :to="item.component" exact>
-                    <v-list-item-icon>
+                    <v-list-item-icon class="v-list-item__icon">
                         <v-icon v-text="item.icon" />
                     </v-list-item-icon>
                     <v-list-item-content>
@@ -104,11 +104,12 @@ export default {
 .dp {
     position: relative;
     top: 1%;
+    left: 0%;
     display: flex;
     justify-content: center;
     /* left: 25%; */
-    margin: auto;
-    width: 95%;
+    /* margin: auto; */
+    width: 100%;
     clip-path: circle(at center);
 }
 
@@ -117,12 +118,26 @@ export default {
     position: absolute !important;
     bottom: 0px;
     transform: translateY(30%);
-    margin-left: 40%;
+    margin-left: 45%;
     filter: drop-shadow(1px 1px 1px white) drop-shadow(-1px -1px 1px white);
 }
 
 .dp_bat {
     position: relative;
     top: 1%;
+    left: 0%;
+}
+
+.v-list-item__icon {
+    margin: 12px 0 !important;
+    padding-right: 16px !important;
+}
+
+.v-list-item__content {
+    padding: 6px !important;
+}
+
+.bio {
+    margin-top: 12px;
 }
 </style>

@@ -8,7 +8,7 @@
                         <v-overlay v-if="showButton" absolute opacity="0.5">
                             <v-btn v-if="showButton" @click="decode">Show</v-btn>
                         </v-overlay>
-                        Email:<br> <a v-if="showButton == false" :href="email">{{ email }}</a> <span
+                        Email:<br> <a v-if="showButton == false" :href="'mailto:' + email">{{ email }}</a> <span
                             v-if="showButton">{{ email }}</span>
                         <br>
                         <!-- <a v-if="showButton == false" :href="bat_email">{{ bat_email }}</a> <span v-if="showButton">{{
@@ -28,10 +28,10 @@
 export default {
     name: 'ContaceMeTab',
     data: () => ({
-        email_enc: 'a2FydGhpa0Bhc3UuZWR1',
-        address_enc: 'QVNVIFNjaG9vbCBvZiBFYXJ0aCBhbmQgU3BhY2UgRXhwbG9yYXRpb24KVGVtcGUsIEFaLCA4NTI4Nw==',
-        email: 'a2FydGhpa0Bhc3UuZWR1',
-        address: 'QVNVIFNjaG9vbCBvZiBFYXJ0aCBhbmQgU3BhY2UgRXhwbG9yYXRpb24KVGVtcGUsIEFaLCA4NTI4Nw==',
+        email_enc: 'a2FydGhpa0BjYWx0ZWNoLmVkdQ==',
+        address_enc: 'QnJpZGdlIEFubmV4LCBQYXNhZGVuYQpDQSA5MTEyNSwgVW5pdGVkIFN0YXRlcw==',
+        email: 'a2FydGhpa0BjYWx0ZWNoLmVkdQ==',
+        address: 'QnJpZGdlIEFubmV4LCBQYXNhZGVuYQpDQSA5MTEyNSwgVW5pdGVkIFN0YXRlcw==',
         bat_email: 'aUBhbWJhdG1hbi5jb20=',
         showButton: true,
     }),

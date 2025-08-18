@@ -1,6 +1,6 @@
 <template>
     <v-overlay absolute opacity=".5">
-        <v-card class="overflow-y-auto" max-width="1000" max-height="1000" dark>
+        <v-card class="overflow-y-auto" max-width="1000" max-height="800" dark>
             <v-card-title>About Me</v-card-title>
             <v-img contain :src="require('../../assets/me_photographer.jpg')" />
             <v-card-text class="text-lg-body-1">
@@ -17,7 +17,8 @@
                     from time to time. Death Metal music is an inextricable part of me. <a
                         href="https://en.wikipedia.org/wiki/Demonic_Resurrection">DR</a>, <a
                         href="https://toolband.com/">Tool</a>, <a href="https://www.mastodonrocks.com/">Mastodon</a>, <a
-                        href="https://www.metallica.com/">Metallica</a> to name a few. I like to hike and take pictures of random things wherever I go. I enjoy playing Call of Duty and
+                        href="https://www.metallica.com/">Metallica</a> to name a few. I like to hike and take pictures
+                    of random things wherever I go. I enjoy playing Call of Duty and
                     Dota 2 (steam id: scisyhporsta). Besides internet games, I love biking, badminton and cricket.
                     Unconventionally, I like to field more than batting or bowling in cricket, although my throws to
                     either ends of the wicket are usually as useful as the letter p in raspberry.</p>
