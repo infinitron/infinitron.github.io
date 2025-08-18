@@ -8,14 +8,14 @@
       <BHLensing />
       <NightMountains />
       <SocialSpeedDial />
-      <!-- <CopyRightFooter/> -->
+      <CopyRightFooter />
     </v-main>
   </v-app>
 </template>
 
 <script>
 import SideBar from './components/SideBar.vue'
-// import CopyRightFooter from './components/CopyRightFooter.vue'
+import CopyRightFooter from './components/CopyRightFooter.vue'
 import SocialSpeedDial from './components/SocialSpeedDial.vue'
 import NightMountains from './components/NightMountains.vue'
 import BHLensing from './components/BHLensing.vue'
@@ -28,7 +28,7 @@ export default {
 
   components: {
     SideBar,
-    // CopyRightFooter,
+    CopyRightFooter,
     SocialSpeedDial,
     NightMountains,
     BHLensing
