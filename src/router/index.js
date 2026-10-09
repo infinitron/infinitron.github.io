@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-// import TestComp from '../components/TestComp.vue'
 import NoComp from '../components/NoComp.vue'
 import AboutMe from '../components/views/AboutMe.vue'
 import IntroPage from '../components/views/Intro.vue'
@@ -27,10 +26,9 @@ const routes = [
     {path:'/Blog/:slug',component:BlogPost,name:'BlogPost',props:true},
     { path: '/', redirect: '/Intro' },
     { path: '/JustLensing', component: NoComp, name: 'JustLensing' ,meta:{title:'Karthik Reddy - Watch Lensing'}},
-    { path: '/Intro', component: IntroPage, name: 'Intro' },
+    { path: '/Intro', component: IntroPage, name: 'Intro', meta:{title:'Karthik Reddy - Basic Astrophysicist, Part-time Batman'} },
     {path: '/Experience/', component: ExperiencePage,name:'Experience',meta:{title:'Karthik Reddy - Experience'}    },
     { path: '*', redirect: '/Intro' },
-    { path: '/ResearchInterests', component: NoComp, name: 'ResearchInterests',meta:{title:'Karthik Reddy - Research'} },
     { path: '/ContactMe', component: ContaceMeTab, name: 'ContactMe' ,meta:{title:'Karthik Reddy - Contact me'}}
 ]
 

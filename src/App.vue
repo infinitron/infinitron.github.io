@@ -6,6 +6,7 @@
       <!-- <v-overlay absolute v-if="selected_page!=null"><router-view /></v-overlay> -->
       <router-view class="absolute" />
       <BHLensing />
+      <SkyHint />
       <NightMountains />
       <SocialSpeedDial />
       <CopyRightFooter />
@@ -19,6 +20,7 @@ import CopyRightFooter from './components/CopyRightFooter.vue'
 import SocialSpeedDial from './components/SocialSpeedDial.vue'
 import NightMountains from './components/NightMountains.vue'
 import BHLensing from './components/BHLensing.vue'
+import SkyHint from './components/SkyHint.vue'
 import BatText from '!raw-loader!./assets/batLogoASCII.txt'
 
 
@@ -31,7 +33,8 @@ export default {
     CopyRightFooter,
     SocialSpeedDial,
     NightMountains,
-    BHLensing
+    BHLensing,
+    SkyHint
   },
 
   data: () => ({

@@ -45,7 +45,6 @@
             </v-list-item-group>
         </v-list>
         <v-divider></v-divider>
-        <v-subheader v-if="$vuetify.breakpoint.mdAndUp">Drag around the sky for fun! →</v-subheader>
 
         <div class="pa-2">
             <v-btn block color="blue darken-1" link :href="cv" target="_blank">
