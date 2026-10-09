@@ -29,7 +29,6 @@ const routes = [
     { path: '/Intro', component: IntroPage, name: 'Intro', meta:{title:'Karthik Reddy - Basic Astrophysicist, Part-time Batman'} },
     {path: '/Experience/', component: ExperiencePage,name:'Experience',meta:{title:'Karthik Reddy - Experience'}    },
     { path: '*', redirect: '/Intro' },
-    { path: '/ResearchInterests', component: NoComp, name: 'ResearchInterests',meta:{title:'Karthik Reddy - Research'} },
     { path: '/ContactMe', component: ContaceMeTab, name: 'ContactMe' ,meta:{title:'Karthik Reddy - Contact me'}}
 ]
 
