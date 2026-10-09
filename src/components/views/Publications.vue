@@ -50,8 +50,6 @@ var title2 = '<span class="font-weight-bold">Karthik Reddy</span>';
 export default {
     name: 'PublicationList',
     data: () => ({
-        title: '<span class="font-weight-bold>K Reddy"</span>',
-        title2: '<span class="font-weight-bold>Karthik Reddy"</span>',
         pubs: [
             { title: 'Flux emergence in the solar active region NOAA 11158: the evolution of net current', year: '2015', authors: 'P Vemareddy, P Venkatakrishnan, ' + title2, citation: 'Research in Astronomy and Astrophysics 15 (9), 1547	', link: 'https://iopscience.iop.org/article/10.1088/1674-4527/15/9/011/meta' },
             {

@@ -82,7 +82,8 @@ export default {
             this.scene.add(mesh);
 
             this.renderer = new THREE.WebGLRenderer();
-            this.renderer.setPixelRatio(window.devicePixelRatio);
+            // the lensing shader is per-pixel heavy; capping the ratio keeps laptops cool with no visible loss
+            this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
             container.appendChild(this.renderer.domElement);
 
             this.camera = new THREE.PerspectiveCamera(45, container.parentElement.clientHeight / container.parentElement.clientWidth, 1, 80000);
@@ -149,7 +150,8 @@ export default {
         },
 
         animate: function () {
-            requestAnimationFrame(this.animate);
+            this.frameId = requestAnimationFrame(this.animate);
+            if (document.hidden) return; // nothing to draw while the tab is in the background
             //requestAnimationFrame((function(t){return function(){animate(t)}})(textures));
 
             this.camera.updateMatrixWorld();
@@ -202,6 +204,10 @@ export default {
     mounted: function () {
         this.init();
         //this.animate();
+    },
+    beforeDestroy: function () {
+        cancelAnimationFrame(this.frameId);
+        window.removeEventListener('resize', this.onWindowResize, false);
     }
 }
 </script>
