@@ -1,19 +1,14 @@
 <template>
-    <v-container class="overflow-y-auto max-h mx-0 pa-8">
+    <v-container class="mx-0 pa-2 pa-sm-6">
         <v-timeline dense reverse>
             <v-timeline-item v-for="w in work" :key="w.position" :color="w.color" small>
                 <template v-slot:opposite>
                     <span :class="`headline font-weight-bold ${w.color}--text`" v-text="w.year"></span>
                 </template>
-                <v-card class="ma-6" elevation="4">
+                <v-card class="ma-1 ma-sm-3" elevation="4">
                     <!-- <div class="py-4"> -->
                     <v-card-title :class="`headline ${w.color}--text`">
-                        <v-container>
-                            <v-row justify="space-between">
-                                <v-col class="pl-0">{{ w.position }}</v-col><v-col class="text-right">{{ w.time
-                                }}</v-col>
-                            </v-row>
-                        </v-container>
+                        <div class="d-flex flex-wrap justify-space-between full-w"><span class="mr-4">{{ w.position }}</span><span>{{ w.time }}</span></div>
                     </v-card-title>
                     <v-card-subtitle>
                         {{ w.employer }}<br> {{ w.place }}
@@ -55,9 +50,3 @@ export default {
     })
 }
 </script>
-
-<style>
-.max-h {
-    max-height: calc(90vh);
-}
-</style>

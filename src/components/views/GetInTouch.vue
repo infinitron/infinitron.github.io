@@ -1,15 +1,15 @@
 <template>
     <v-container fill-height fluid class="ma-0 pa-0 overflow-x-hidden">
         <v-row no-gutters align="center" justify="center">
-            <v-col cols="6" sm="12" lg="4" md="4" xl="4" align-self="center">
-                <v-card class="overflow-x-hidden test max-h " dark>
+            <v-col cols="12" sm="10" md="6" lg="4" align-self="center" class="page-col">
+                <v-card class="page-card" dark>
                     <v-card-title>Contact Me</v-card-title>
                     <v-card-text class="text-h6 ma-1">
-                        <v-overlay v-if="showButton" absolute opacity="0.5">
-                            <v-btn v-if="showButton" @click="decode">Show</v-btn>
-                        </v-overlay>
-                        Email:<br> <a v-if="showButton == false" :href="'mailto:' + email">{{ email }}</a> <span
-                            v-if="showButton">{{ email }}</span>
+                        <v-btn v-if="showButton" color="blue darken-1" @click="decode">
+                            <v-icon left>mdi-eye</v-icon>Show contact details
+                        </v-btn>
+                        <template v-else>
+                        Email:<br> <a :href="'mailto:' + email">{{ email }}</a>
                         <br>
                         <!-- <a v-if="showButton == false" :href="bat_email">{{ bat_email }}</a> <span v-if="showButton">{{
                                 bat_email
@@ -17,6 +17,7 @@
                         <br><br>
                         Address:<br>
                         <pre>{{ address }}</pre>
+                        </template>
                     </v-card-text>
                 </v-card>
             </v-col>
@@ -50,5 +51,3 @@ export default {
     }
 }
 </script>
-a="UMBC Physics Building\n1000 Hilltop Cir, Baltimore, MD 21250
-"

@@ -1,5 +1,11 @@
 <template>
-    <v-navigation-drawer class="grey darken-4" dark :permanent="$vuetify.breakpoint.mdAndUp" app dense>
+  <div>
+    <v-app-bar v-if="!$vuetify.breakpoint.mdAndUp" app dark dense flat class="grey darken-4">
+        <v-app-bar-nav-icon aria-label="Open navigation" @click.stop="drawer = !drawer" />
+        <v-toolbar-title>Karthik Reddy</v-toolbar-title>
+    </v-app-bar>
+    <v-navigation-drawer v-model="drawer" class="grey darken-4" dark :permanent="$vuetify.breakpoint.mdAndUp"
+        :temporary="!$vuetify.breakpoint.mdAndUp" app dense>
         <div class="dp_bat">
             <router-link :to="'/'">
                 <v-img :src="require('../assets/dp2.jpg')" class="dp" />
@@ -27,7 +33,8 @@
 
             <v-divider></v-divider>
             <v-list-item-group v-model="selected_item" color="blue lighten-1" @change="change_page">
-                <v-list-item v-for="item in items" :key="item.id" :to="item.component" exact>
+                <v-list-item v-for="item in items" :key="item.id" :to="item.component" :exact="item.exact !== false"
+                    @click="closeOnMobile">
                     <v-list-item-icon class="v-list-item__icon">
                         <v-icon v-text="item.icon" />
                     </v-list-item-icon>
@@ -38,17 +45,16 @@
             </v-list-item-group>
         </v-list>
         <v-divider></v-divider>
-        <v-subheader>Drag around the sky for fun! →</v-subheader>
+        <v-subheader v-if="$vuetify.breakpoint.mdAndUp">Drag around the sky for fun! →</v-subheader>
 
-        <template v-slot:append>
-            <div class="pa-2">
-                <v-btn block color="blue darken-1" link :href="cv" target="_blank">
-                    <v-icon left>mdi-file-document-multiple</v-icon> Download CV
-                    <v-icon right>mdi-open-in-new</v-icon>
-                </v-btn>
-            </div>
-        </template>
+        <div class="pa-2">
+            <v-btn block color="blue darken-1" link :href="cv" target="_blank">
+                <v-icon left>mdi-file-document-multiple</v-icon> Download CV
+                <v-icon right>mdi-open-in-new</v-icon>
+            </v-btn>
+        </div>
     </v-navigation-drawer>
+  </div>
 </template>
 
 <script>
@@ -58,12 +64,14 @@ export default {
     name: 'SideBar',
     data: () => ({
         cv,
+        drawer: false,
         items: [
             { title: 'Intro', id: 'intro', component: { name: 'Intro' }, icon: 'mdi-home' },
             { title: 'Experience', id: 'experience', component: { name: 'Experience' }, icon: 'mdi-briefcase' },//,params:{type:"Education"}
             { title: 'Research', id: 'research_interests', component: { name: 'Research' }, icon: 'mdi-electron-framework' },
             // {title:'Download CV'},
             { title: 'Publications', id: 'publications', component: { name: 'Publications' }, icon: 'mdi-notebook' },
+            { title: 'Blog', id: 'blog', component: { name: 'Blog' }, icon: 'mdi-post-outline', exact: false },
             { title: 'About Me', id: 'who_am_i', component: { name: 'AboutMe' }, icon: 'mdi-human-male-female' },
             { title: 'Get in touch', id: 'get_in_touch', component: { name: 'ContactMe' }, icon: 'mdi-card-account-mail' },
             { title: 'Just lensing', id: 'just_lensing', component: { name: 'JustLensing' }, icon: 'mdi-power-off' }
@@ -74,6 +82,9 @@ export default {
         BatDialog
     },
     methods: {
+        closeOnMobile: function () {
+            if (!this.$vuetify.breakpoint.mdAndUp) this.drawer = false
+        },
         change_page: function (page) {
             if (page == undefined || page == null) {
                 this.$emit('page-name', null)
@@ -126,6 +137,9 @@ export default {
     position: relative;
     top: 1%;
     left: 0%;
+    /* shrink the avatar on short (laptop) screens so the menu always fits */
+    width: clamp(96px, 26vh, 256px);
+    margin: 0 auto;
 }
 
 .v-list-item__icon {
@@ -139,5 +153,19 @@ export default {
 
 .bio {
     margin-top: 12px;
+}
+
+@media (max-height: 820px) {
+    .bio {
+        margin-top: 4px;
+    }
+
+    .v-navigation-drawer .v-list-item {
+        min-height: 40px;
+    }
+
+    .v-list-item__icon {
+        margin: 8px 0 !important;
+    }
 }
 </style>

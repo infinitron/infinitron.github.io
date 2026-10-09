@@ -1,10 +1,10 @@
 <template>
     <v-container fill-height fluid class="ma-0 pa-0" >
         <v-row no-gutters align="center" justify="center" >
-            <v-col cols="6" sm="12" lg="8" md="8" xl="8" align-self="center"  >
-                <v-card class="overflow-y-hidden test max-h " dark>
+            <v-col cols="12" md="10" lg="8" align-self="center" class="page-col">
+                <v-card class="page-card" dark>
                     <v-card-title>Experience</v-card-title>
-                    <v-tabs dark vertical center-active>
+                    <v-tabs dark :vertical="$vuetify.breakpoint.smAndUp" center-active>
                         <v-tab v-for="item in items" :key="item.name" exact>
                             <v-icon left>mdi-{{ item.icon }}</v-icon>{{ item.name }}
                         </v-tab>

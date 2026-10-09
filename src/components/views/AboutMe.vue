@@ -1,8 +1,10 @@
 <template>
-    <v-overlay absolute opacity=".5">
-        <v-card class="overflow-y-auto" max-width="1000" max-height="800" dark>
+    <v-container fill-height fluid class="ma-0 pa-0">
+        <v-row no-gutters align="center" justify="center">
+            <v-col cols="12" md="10" lg="8" align-self="center" class="page-col">
+        <v-card class="page-card" dark>
             <v-card-title>About Me</v-card-title>
-            <v-img contain :src="require('../../assets/me_photographer.jpg')" />
+            <v-img max-height="40vh" :src="require('../../assets/me_photographer.jpg')" />
             <v-card-text class="text-lg-body-1">
                 <p> Born and brought up in Hyderabad, India--so I naturally love cooking and eating <a
                         href="https://en.wikipedia.org/wiki/Hyderabadi_biryani">Biryani</a>. I&#39;m married to the love
@@ -54,7 +56,9 @@
                     India
                     prior to starting my Ph.D.</p> -->
         </v-card>
-    </v-overlay>
+            </v-col>
+        </v-row>
+    </v-container>
 </template>
 
 <script>

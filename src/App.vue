@@ -59,6 +59,36 @@ export default {
   z-index: 2;
 }
 
+/* Every content card scrolls inside the visible area (viewport minus footer and breathing room),
+   so nothing is ever clipped on short laptop screens. */
+.page-card {
+  --page-gap: 16px;
+  max-height: calc(100vh - 48px - 2 * var(--page-gap));
+  max-height: calc(100dvh - 48px - 2 * var(--page-gap));
+  overflow-y: auto;
+}
+
+.full-w {
+  width: 100%;
+}
+
+/* Vuetify breaks card titles at any character ("Astro/physics"); break at word boundaries instead */
+.v-card__title {
+  word-break: normal;
+}
+
+.page-col {
+  padding: var(--page-gap) !important;
+}
+
+@media (max-width: 959px) {
+  .page-card {
+    /* the app bar takes 48px on small screens */
+    max-height: calc(100vh - 48px - 48px - 2 * var(--page-gap));
+    max-height: calc(100dvh - 48px - 48px - 2 * var(--page-gap));
+  }
+}
+
 html {
   overflow-y: auto
 }
