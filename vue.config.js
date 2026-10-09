@@ -5,6 +5,10 @@ module.exports = defineConfig({
   ],
   chainWebpack: config => {
     config.module
+      .rule('md')
+      .test(/\.md$/)
+      .type('asset/source')
+    config.module
       .rule('pdf')
       .test(/\.pdf$/)
       .use('file-loader')

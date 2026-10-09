@@ -1,18 +1,14 @@
 <template>
-    <v-container class="overflow-y-auto max-h mx-0 pa-8" >
+    <v-container class="mx-0 pa-2 pa-sm-6">
         <v-timeline dense reverse >
             <v-timeline-item v-for="edu in education" :key="edu.degree" :color="edu.color" small>
                 <template v-slot:opposite>
                     <span :class="`headline font-weight-bold ${edu.color}--text`" v-text="edu.year"></span>
                 </template>
-                <v-card class="ma-6" elevation="4">
+                <v-card class="ma-1 ma-sm-3" elevation="4">
                     <!-- <div class="py-4"> -->
                     <v-card-title :class="`headline ${edu.color}--text`">
-                       <v-container>
-                        <v-row justify="space-between">
-                             <v-col class="pl-0">{{ edu.degree }}</v-col><v-col class="text-right">{{ edu.year }}</v-col>
-                        </v-row>
-                       </v-container>
+                       <div class="d-flex flex-wrap justify-space-between full-w"><span class="mr-4">{{ edu.degree }}</span><span>{{ edu.year }}</span></div>
                     </v-card-title>
                     <v-card-subtitle>
                         {{ edu.college }}<br> {{ edu.place }}
@@ -45,9 +41,3 @@ export default {
     })
 }
 </script>
-
-<style>
-.max-h{
-    max-height:calc(90vh);
-}
-</style>

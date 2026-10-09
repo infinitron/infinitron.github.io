@@ -1,15 +1,15 @@
 <template>
     <v-container fill-height fluid class="ma-0 pa-0">
         <v-row no-gutters align="center" justify="center">
-            <v-col cols="8" sm="12" lg="8" md="8" xl="8" align-self="center">
-                <v-card light class="overflow-y-auto max-h">
+            <v-col cols="12" md="10" lg="8" align-self="center" class="page-col">
+                <v-card light class="page-card">
 
                     <v-toolbar>
                         <v-toolbar-title>
                             Research
                         </v-toolbar-title>
                     </v-toolbar>
-                    <v-card-text class="text-h6 text-center">
+                    <v-card-text class="text-subtitle-1 text-md-h6 text-center">
                         Do you ever wonder why there is a universe at all or how mysterious phenomena in its grand
                         scheme keep popping up eternally as if the universe was a magical crystal ball? What if we had
                         the key to this crystal ball that allowed us to peer into the clockwork of this universe at any
@@ -53,11 +53,3 @@ export default {
     components: { XJETSProj, LowCountsProj, EPIC }
 }
 </script>
-
-
-
-<style>
-.max-h {
-    max-height: calc(90vh);
-}
-</style>

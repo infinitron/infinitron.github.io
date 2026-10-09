@@ -1,8 +1,8 @@
 <template>
     <v-container fill-height fluid class="ma-0 pa-0">
         <v-row no-gutters align="center" justify="center">
-            <v-col cols="8" sm="12" lg="6" md="6" xl="8" align-self="center">
-                <v-card light class="overflow-y-auto max-h">
+            <v-col cols="12" md="10" lg="8" align-self="center" class="page-col">
+                <v-card light class="page-card">
 
                     <v-toolbar>
                         <v-toolbar-title>
@@ -21,7 +21,7 @@
                         <!-- <v-list> -->
                             <v-row>
                                 <v-col cols="12">
-                        <v-list-item v-for="item in pubs" :key="item.title" three-line>
+                        <v-list-item v-for="item in pubs" :key="item.title" three-line class="pub-item">
                             <v-list-item-content>
                                 <v-list-item-title>
                                     [{{item.year}}] <a :href="item.link" target="_blank">{{item.title}}</a><v-icon small>mdi-open-in-new</v-icon>
@@ -83,10 +83,13 @@ export default {
 }
 </script>
 
-
-
 <style>
-.max-h {
-    max-height: calc(90vh);
+/* let long titles and author lists wrap instead of being cut off with an ellipsis */
+.pub-item .v-list-item__title,
+.pub-item .v-list-item__subtitle {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    line-height: 1.4;
 }
 </style>
